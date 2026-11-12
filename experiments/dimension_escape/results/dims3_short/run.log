@@ -1,0 +1,14 @@
+2026-11-11 02:15:31,799 start: {'seeds': 3, 'dims': 3, 'condition': 'all', 'duration_ms': 10000.0, 'dt_ms': 0.1, 'out': 'experiments/dimension_escape/results/dims3_short', 'workers': 0, 'trace_every_ms': 10.0} workers=8 git=e66e958bac69875937decde1148a38b2b90721e7
+2026-11-11 02:15:49,654 full seed=0 escaped=True t_escape=1588.6999999996506 wall=17.0s
+2026-11-11 02:15:49,655 full seed=1 escaped=True t_escape=856.4000000001262 wall=9.1s
+2026-11-11 02:15:49,655 full seed=2 escaped=True t_escape=901.8000000001365 wall=9.6s
+2026-11-11 02:16:06,058 random_motor seed=0 escaped=False t_escape=None wall=33.3s
+2026-11-11 02:16:06,187 random_motor seed=1 escaped=False t_escape=None wall=33.4s
+2026-11-11 02:16:06,188 random_motor seed=2 escaped=False t_escape=None wall=33.1s
+2026-11-11 02:16:06,190 frozen seed=0 escaped=True t_escape=879.0000000001313 wall=5.7s
+2026-11-11 02:16:06,190 frozen seed=1 escaped=True t_escape=2265.8999999990347 wall=14.5s
+2026-11-11 02:16:06,190 frozen seed=2 escaped=True t_escape=902.0000000001365 wall=6.0s
+2026-11-11 02:16:06,190 no_da seed=0 escaped=True t_escape=878.5000000001312 wall=9.6s
+2026-11-11 02:16:06,190 no_da seed=1 escaped=True t_escape=1838.4999999994234 wall=16.6s
+2026-11-11 02:16:06,190 no_da seed=2 escaped=True t_escape=1506.899999999725 wall=13.6s
+2026-11-11 02:16:06,405 gotovo: experiments/dimension_escape/results/dims3_short

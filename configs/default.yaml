@@ -1,0 +1,10 @@
+seed: 12345
+dt_ms: 0.025
+t_stop_ms: 1000.0
+control_period_ms: 1.0
+default_method: rk4
+mechanisms: {}
+environment: {}
+organism: {}
+experiment: {}
+logging: {}

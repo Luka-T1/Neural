@@ -1,0 +1,278 @@
+{
+  "dims": 3,
+  "duration_ms": 10000.0,
+  "dt_ms": 0.1,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "conditions": {
+    "full": {
+      "n": 3,
+      "escaped": 3,
+      "rate": 1.0,
+      "wilson95": [
+        0.43850296436068037,
+        1.0
+      ],
+      "t_escape_median_ms": 901.8000000001365,
+      "t_escape_iqr_ms": [
+        879.1000000001313,
+        1245.2499999998936
+      ],
+      "per_seed": [
+        {
+          "seed": 0,
+          "escaped": true,
+          "t_escape_ms": 1588.6999999996506
+        },
+        {
+          "seed": 1,
+          "escaped": true,
+          "t_escape_ms": 856.4000000001262
+        },
+        {
+          "seed": 2,
+          "escaped": true,
+          "t_escape_ms": 901.8000000001365
+        }
+      ]
+    },
+    "random_motor": {
+      "n": 3,
+      "escaped": 0,
+      "rate": 0.0,
+      "wilson95": [
+        0.0,
+        0.5614970356393196
+      ],
+      "t_escape_median_ms": null,
+      "t_escape_iqr_ms": null,
+      "per_seed": [
+        {
+          "seed": 0,
+          "escaped": false,
+          "t_escape_ms": null
+        },
+        {
+          "seed": 1,
+          "escaped": false,
+          "t_escape_ms": null
+        },
+        {
+          "seed": 2,
+          "escaped": false,
+          "t_escape_ms": null
+        }
+      ]
+    },
+    "frozen": {
+      "n": 3,
+      "escaped": 3,
+      "rate": 1.0,
+      "wilson95": [
+        0.43850296436068037,
+        1.0
+      ],
+      "t_escape_median_ms": 902.0000000001365,
+      "t_escape_iqr_ms": [
+        890.5000000001339,
+        1583.9499999995855
+      ],
+      "per_seed": [
+        {
+          "seed": 0,
+          "escaped": true,
+          "t_escape_ms": 879.0000000001313
+        },
+        {
+          "seed": 1,
+          "escaped": true,
+          "t_escape_ms": 2265.8999999990347
+        },
+        {
+          "seed": 2,
+          "escaped": true,
+          "t_escape_ms": 902.0000000001365
+        }
+      ]
+    },
+    "no_da": {
+      "n": 3,
+      "escaped": 3,
+      "rate": 1.0,
+      "wilson95": [
+        0.43850296436068037,
+        1.0
+      ],
+      "t_escape_median_ms": 1506.899999999725,
+      "t_escape_iqr_ms": [
+        1192.699999999928,
+        1672.6999999995742
+      ],
+      "per_seed": [
+        {
+          "seed": 0,
+          "escaped": true,
+          "t_escape_ms": 878.5000000001312
+        },
+        {
+          "seed": 1,
+          "escaped": true,
+          "t_escape_ms": 1838.4999999994234
+        },
+        {
+          "seed": 2,
+          "escaped": true,
+          "t_escape_ms": 1506.899999999725
+        }
+      ]
+    }
+  },
+  "comparisons": [
+    {
+      "a": "full",
+      "b": "random_motor",
+      "fisher_p": 0.09999999999999996,
+      "mwu_p": 0.06360256962075364,
+      "p_holm": 0.2999999999999999
+    },
+    {
+      "a": "full",
+      "b": "frozen",
+      "fisher_p": 1.0,
+      "mwu_p": 0.7,
+      "p_holm": 1.0
+    },
+    {
+      "a": "full",
+      "b": "no_da",
+      "fisher_p": 1.0,
+      "mwu_p": 0.7,
+      "p_holm": 1.0
+    }
+  ],
+  "da_leakage_audit": {
+    "full": {
+      "n_samples": 339,
+      "spearman_da_vs_abs_dxperp": -0.21499533804058268,
+      "spearman_da_vs_abs_dx0": 0.2948814991666065
+    },
+    "frozen": {
+      "n_samples": 409,
+      "spearman_da_vs_abs_dxperp": -0.12832048779093408,
+      "spearman_da_vs_abs_dx0": 0.36571561780225936
+    }
+  },
+  "secondary": {
+    "full": {
+      "plv": 0.6712097066688504,
+      "mean_sin_dphi": -0.12766166601686477,
+      "mean_abs_area_rate": 1.4693183713363538,
+      "w_cross_start_mean": 0.050345141819631754,
+      "w_cross_end_mean": 0.053164028282491387
+    },
+    "random_motor": {
+      "plv": 0.17455298358673052,
+      "mean_sin_dphi": -0.008170576742394025,
+      "mean_abs_area_rate": 0.5061317564777351,
+      "w_cross_start_mean": 0.0,
+      "w_cross_end_mean": 0.0
+    },
+    "frozen": {
+      "plv": 0.8928882563826511,
+      "mean_sin_dphi": -0.5449895542336329,
+      "mean_abs_area_rate": 1.464552915031982,
+      "w_cross_start_mean": 0.050345141819631754,
+      "w_cross_end_mean": 0.050345141819631754
+    },
+    "no_da": {
+      "plv": 0.8299286523528981,
+      "mean_sin_dphi": -0.5951856040759252,
+      "mean_abs_area_rate": 1.7329804322885867,
+      "w_cross_start_mean": 0.050345141819631754,
+      "w_cross_end_mean": 0.049405059436433495
+    }
+  },
+  "config": {
+    "args": {
+      "seeds": 3,
+      "dims": 3,
+      "condition": "all",
+      "duration_ms": 10000.0,
+      "dt_ms": 0.1,
+      "out": "experiments/dimension_escape/results/dims3_short",
+      "workers": 0,
+      "trace_every_ms": 10.0
+    },
+    "git_hash": "e66e958bac69875937decde1148a38b2b90721e7",
+    "organism": {
+      "C_pF": 200.0,
+      "gL_nS": 10.0,
+      "E_L": -65.0,
+      "V_th": -50.0,
+      "V_reset": -65.0,
+      "t_ref_ms": 2.0,
+      "tau_ampa_ms": 2.0,
+      "tau_gaba_ms": 6.0,
+      "E_ampa": 0.0,
+      "E_gaba": -75.0,
+      "n_exc": 80,
+      "n_inh": 20,
+      "p_conn": 0.1,
+      "cpg_pop_size": 10,
+      "cpg_inh_size": 5,
+      "tau_w_ms": 450.0,
+      "w_adapt_inc_pA": 8.0,
+      "sensory_gain": 1.0,
+      "sensory_bias_nA": 0.12,
+      "bias_exc_nA": 0.1,
+      "bias_inh_nA": 0.05,
+      "bias_cpg_nA": 0.28,
+      "noise_nA": 0.03,
+      "w_sens_exc": 0.8,
+      "w_ee": 0.5,
+      "w_ei": 0.8,
+      "w_ie": 2.0,
+      "w_ii": 1.0,
+      "w_exc_cpg": 0.25,
+      "w_cpg_inh": 10.0,
+      "w_inh_cpg": 10.0,
+      "w_cross": 0.05,
+      "w_max_factor": 4.0,
+      "detune_lo": 0.1,
+      "detune_hi": 0.3,
+      "eta": 0.02,
+      "tau_c_ms": 1000.0,
+      "tau_stdp_ms": 20.0,
+      "A_plus": 1.0,
+      "A_minus": 1.05,
+      "da_tonic": 0.1,
+      "da_gain": 1.0,
+      "da_cap": 10.0,
+      "tau_stat_ms": 2000.0,
+      "tau_habit_ms": 10000.0,
+      "novelty_eps": 0.05,
+      "tau_rate_ms": 50.0,
+      "out_gain_nA_per_Hz": 0.05
+    },
+    "world": {
+      "dims": 3,
+      "channel_length_mm": 20.0,
+      "body_length_mm": 1.0,
+      "k_axial_mm_per_ms": 0.002,
+      "k_wall_per_ms": 0.05,
+      "k_perp_mm": 4.0,
+      "kappa_per_ms": 0.002,
+      "sigma_perp_mm_per_sqrt_ms": 0.0063,
+      "groove_width_mm": 0.5,
+      "chem_lambda_mm": 5.0,
+      "tau_act_ms": 50.0,
+      "obs_noise": 0.01,
+      "escape_threshold_mm": 1.0,
+      "escape_hold_ms": 500.0
+    },
+    "seed_scheme": "neural.core.seed.derive_seed(seed, name), names: world/body/organism/random_motor"
+  }
+}
