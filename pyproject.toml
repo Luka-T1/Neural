@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "neural"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = ["numpy", "scipy"]
+
+[project.optional-dependencies]
+yaml = ["pyyaml"]
+dev = ["pytest"]
+viz = ["matplotlib"]
+
+[project.scripts]
+neural = "neural.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["neural*", "experiments*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

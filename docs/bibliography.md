@@ -1,0 +1,102 @@
+# Bibliografija
+
+Pravilo tima: `doi_status: verified` se upisuje samo kada je DOI proveren kroz Crossref/doi.org (naslov, časopis, godina, volumen, strane se poklapaju). Vlasnik bibliografije je specijalista neuro. U suprotnom `needs-verify` uz podstavku „Razlog“.
+Nema citata van ove liste.
+
+- [HH1952] Hodgkin AL, Huxley AF (1952). A quantitative description of membrane current and its application to conduction and excitation in nerve. J Physiol 117(4):500–544. DOI: 10.1113/jphysiol.1952.sp004764 — doi_status: needs-verify
+  - Nalaz: Na⁺/K⁺ provodnosti sa kapijama m, h, n u aksonu lignje opisuju akcioni potencijal.
+  - Implikacija: osnova HH mehanizma; originalni znak potencijala se prevodi u modernu konvenciju (mirovanje −65 mV).
+- [JahrStevens1990] Jahr CE, Stevens CF (1990). Voltage dependence of NMDA-activated macroscopic conductances predicted by single-channel kinetics. J Neurosci 10(9):3178–3182. DOI: 10.1523/JNEUROSCI.10-09-03178.1990 — doi_status: needs-verify
+  - Nalaz: blokada NMDA kanala magnezijumom daje B(V)=1/(1+e^{−0.062V}[Mg]/3.57).
+  - Implikacija: NMDA provodnost se množi faktorom B(V), Mg = 1 mM.
+- [Destexhe1994] Destexhe A, Mainen ZF, Sejnowski TJ (1994). Synthesis of models for excitable membranes, synaptic transmission and neuromodulation using a common kinetic formalism. J Comput Neurosci 1:195–230. DOI: 10.1007/BF00961734 — doi_status: needs-verify
+  - Nalaz: sinaptički receptori i kanali u zajedničkom kinetičkom formalizmu.
+  - Implikacija: opravdava jednostavne kinetičke sinapse umesto punih Markovljevih modela.
+- [Destexhe1998] Destexhe A, Mainen ZF, Sejnowski TJ (1998). Kinetic models of synaptic transmission. U: Koch C, Segev I (ur.) Methods in Neuronal Modeling, 2. izd., MIT Press. nema DOI (poglavlje u knjizi) — doi_status: needs-verify
+  - Nalaz: tipične vremenske konstante AMPA, NMDA, GABA_A sinapsi.
+  - Implikacija: izvor τ vrednosti za dvoeksponencijalne/eksponencijalne sinapse (tačne vrednosti needs-verify).
+- [BiPoo1998] Bi GQ, Poo MM (1998). Synaptic modifications in cultured hippocampal neurons: dependence on spike timing, synaptic strength, and postsynaptic cell type. J Neurosci 18(24):10464–10472. DOI: 10.1523/JNEUROSCI.18-24-10464.1998 — doi_status: needs-verify
+  - Nalaz: znak i veličina promene sinapse zavise od Δt pre/post spajka.
+  - Implikacija: eksponencijalni prozor STDP; pozitivno Δt = potencijacija.
+- [BiPoo2001] Bi G, Poo M (2001). Synaptic modification by correlated activity: Hebb's postulate revisited. Annu Rev Neurosci 24:139–166. DOI: 10.1146/annurev.neuro.24.1.139 — doi_status: needs-verify
+  - Nalaz: pregled STDP prozora; fitovi τ+ i τ− (tačne vrednosti needs-verify).
+  - Implikacija: izvor τ+=16.8 ms i τ−=33.7 ms u stdp mehanizmu.
+- [Song2000] Song S, Miller KD, Abbott LF (2000). Competitive Hebbian learning through spike-timing-dependent synaptic plasticity. Nat Neurosci 3(9):919–926. DOI: 10.1038/78829 — doi_status: needs-verify
+  - Nalaz: blago dominantna depresija (A−>A+) stabilizuje STDP.
+  - Implikacija: A−=1.05·A+ (ASSUMPTION za konkretan odnos).
+- [Izhikevich2007] Izhikevich EM (2007). Solving the distal reward problem through linkage of STDP and dopamine signaling. Cereb Cortex 17(10):2443–2452. DOI: 10.1093/cercor/bhl152 — doi_status: needs-verify
+  - Nalaz: STDP ostavlja eligibility trag; dopamin ga pretvara u promenu težine.
+  - Implikacija: c' = −c/τc + STDP·δ, w' = c·d; biološka veza je hipoteza.
+- [Schultz1997] Schultz W, Dayan P, Montague PR (1997). A neural substrate of prediction and reward. Science 275(5306):1593–1599. DOI: 10.1126/science.275.5306.1593 — doi_status: needs-verify
+  - Nalaz: fazna aktivnost dopaminskih neurona kodira grešku predikcije nagrade.
+  - Implikacija: samo kontekst za skalarni DA signal; naš novelty signal NIJE RPE.
+- [Turrigiano1998] Turrigiano GG, Leslie KR, Desai NS, Rutherford LC, Nelson SB (1998). Activity-dependent scaling of quantal amplitude in neocortical neurons. Nature 391:892–896. DOI: 10.1038/36103 — doi_status: needs-verify
+  - Nalaz: aktivnošću uslovljeno multiplikativno skaliranje miniaturnih EPSC.
+  - Implikacija: homeostaza kao multiplikativno skaliranje težina.
+- [Turrigiano2008] Turrigiano GG (2008). The self-tuning neuron: synaptic scaling of excitatory synapses. Cell 135(3):422–435. DOI: 10.1016/j.cell.2008.10.008 — doi_status: needs-verify
+  - Nalaz: pregled mehanizama sinaptičkog skaliranja; vremenska skala sati–dani.
+  - Implikacija: u simulaciji je τ ubrzan (ASSUMPTION).
+- [vanRossum2000] van Rossum MCW, Bi GQ, Turrigiano GG (2000). Stable Hebbian learning from spike timing-dependent plasticity. J Neurosci 20(23):8812–8821. DOI: 10.1523/JNEUROSCI.20-23-08812.2000 — doi_status: needs-verify
+  - Nalaz: STDP uz multiplikativno skaliranje daje stabilnu raspodelu težina.
+  - Implikacija: skaliranje čuva odnose težina.
+- [Brown1911] Brown TG (1911). The intrinsic factors in the act of progression in the mammal. Proc R Soc Lond B 84(572):308–319. DOI: 10.1098/rspb.1911.0077 — doi_status: needs-verify
+  - Nalaz: ritmična lokomocija bez senzorne povratne sprege; ideja half-centra.
+  - Implikacija: CPG kao dve recipročno inhibirane populacije.
+- [Matsuoka1985] Matsuoka K (1985). Sustained oscillations generated by mutually inhibiting neurons with adaptation. Biol Cybern 52(6):367–376. DOI: 10.1007/BF00449593 — doi_status: needs-verify
+  - Nalaz: dva međusobno inhibirana neurona sa adaptacijom osciluju pod uslovima na parametre.
+  - Implikacija: polucentar sa τr, τa, β, a, s.
+- [Matsuoka1987] Matsuoka K (1987). Mechanisms of frequency and pattern control in the neural rhythm generators. Biol Cybern 56:345–353. DOI: 10.1007/BF00319514 — doi_status: needs-verify
+  - Nalaz: frekvencija se kontroliše vremenskim konstantama i tonskim ulazom.
+  - Implikacija: detuniranje para B kroz τ adaptacije.
+- [MarderCalabrese1996] Marder E, Calabrese RL (1996). Principles of rhythmic motor pattern generation. Physiol Rev 76(3):687–717. DOI: 10.1152/physrev.1996.76.3.687 — doi_status: needs-verify
+  - Nalaz: ritmovi nastaju iz svojstava ćelija i sinapsi, uz neuromodulaciju.
+  - Implikacija: ograničenje čisto modela brzine (rate) (bez ćelijskih struja).
+- [DayanAbbott2001] Dayan P, Abbott LF (2001). Theoretical Neuroscience. MIT Press. ISBN nije proveren; nema DOI — doi_status: needs-verify
+  - Nalaz: udžbenički izvor za LIF, konduktansne sinapse i STDP.
+  - Implikacija: opšta referenca za jednačine.
+- [RushLarsen1978] Rush S, Larsen H (1978). A practical algorithm for solving dynamic membrane equations. IEEE Trans Biomed Eng 25(4):389–392. DOI: 10.1109/TBME.1978.326270 — doi_status: needs-verify
+  - Nalaz: numerička šema za membranske jednačine sa kapijama.
+  - Implikacija: integracija kapija eksponencijalnim Euler-om.
+- [Purcell1977] Purcell EM (1977). Life at low Reynolds number. Am J Phys 45(1):3–11. DOI: 10.1119/1.10903 — doi_status: needs-verify
+  - Nalaz: na niskom Re kretanje zahteva nereciprocitetan ciklus (scallop teorema).
+  - Implikacija: ortogonalni pogon zahteva trajnu kvadraturu parova A i B (Lévyjeva površina). Dodato po zahtevu dizajna eksperimenta; ag-research još nije potvrdio.
+- [Bilbao2018] Bilbao A, Patel AK, Rahman M, Vanapalli SA, Blawzdziewicz J (2018). Roll maneuvers are essential for active reorientation of Caenorhabditis elegans in 3D media. Proc Natl Acad Sci USA 115(16). DOI: 10.1073/pnas.1706754115 — doi_status: needs-verify
+  - Razlog: Crossref za 10.1073/pnas.1706754115 ne vraća strane ni broj članka; polja se ne dopisuju po sećanju.
+  - Nalaz: C. elegans u 3D sredini menja ravan undulacije roll manevrom, a reorijentacija tela zavisi od tog rotacionog stepena slobode.
+  - Implikacija: biološko opravdanje za rotaciju ose n za ugao φ u fazi 3; ne služi kao izvor parametara.
+- [ShapereWilczek1989] Shapere A, Wilczek F (1989). Geometry of self-propulsion at low Reynolds number. J Fluid Mech 198:557–585. DOI: 10.1017/S002211208900025X — doi_status: verified
+  - Nalaz: neto pomeranje plivača na niskom Re je geometrijska faza (holonomija) zatvorene petlje u prostoru oblika.
+  - Implikacija: osnova za ugao φ i osu n u fazi 3; povezano sa [Purcell1977].
+- [Hogan1984] Hogan N (1984). Adaptive control of mechanical impedance by coactivation of antagonist muscles. IEEE Trans Autom Control 29(8):681–690. DOI: 10.1109/TAC.1984.1103644 — doi_status: verified
+  - Nalaz: ko-aktivacija antagonista podešava mehaničku impedansu (krutost) zgloba nezavisno od neto momenta.
+  - Implikacija: referenca za ko-kontrakciju i krutost tela u fazi 3; ne služi kao izvor parametara.
+- [LaugaPowers2009] Lauga E, Powers TR (2009). The hydrodynamics of swimming microorganisms. Rep Prog Phys 72(9):096601. DOI: 10.1088/0034-4885/72/9/096601 — doi_status: verified
+  - Nalaz: pregled hidrodinamike plivanja mikroorganizama na niskom Re.
+  - Implikacija: opšta referenca za nereciprocitetno kretanje.
+
+## Razvoj kod beba (Deo 2)
+
+- [ThelenFisher1982] Thelen E, Fisher DM (1982). Newborn stepping: an explanation for a "disappearing" reflex. Dev Psychol 18(5):760–775. DOI: 10.1037/0012-1649.18.5.760 — doi_status: needs-verify
+  - Nalaz: nestajanje refleksa koračanja objašnjeno biomehanikom (rast mase nogu u odnosu na snagu), a ne samo kortikalnom inhibicijom.
+  - Implikacija: poređenje sa bebama; ne služi kao izvor parametara.
+  - Razlog: metapodaci nisu provereni kroz Crossref u ovoj rundi.
+- [Forssberg1985] Forssberg H (1985). Ontogeny of human locomotor control I. Infant stepping, supported locomotion and transition to independent locomotion. Exp Brain Res 57(3):480–493. DOI: 10.1007/BF00237835 — doi_status: needs-verify
+  - Nalaz: koračanje novorođenčeta je ritmično i alternirajuće, sa obrascem koji se razlikuje od zrelog hoda; tumači se kao urođeni spinalni generator ritma.
+  - Implikacija: poređenje urođenog ritma CPG-a modela sa bebom.
+  - Razlog: metapodaci nisu provereni kroz Crossref u ovoj rundi.
+- [Dominici2011] Dominici N, Ivanenko YP, Cappellini G, d'Avella A, Mondì V, Cicchese M, Fabiano A, Silei T, Di Paolo A, Giannini C, Poppele RE, Lacquaniti F (2011). Locomotor primitives in newborn babies and their development. Science 334(6058):997–999. DOI: 10.1126/science.1210617 — doi_status: needs-verify
+  - Nalaz: novorođenčad imaju dva osnovna obrasca aktivacije, a kod deteta koje hoda dodaju se novi.
+  - Implikacija: poređenje broja osnovnih motornih obrazaca; ne služi kao izvor parametara.
+  - Razlog: metapodaci nisu provereni kroz Crossref u ovoj rundi.
+- [RoveeRovee1969] Rovee CK, Rovee DT (1969). Conjugate reinforcement of infant exploratory behavior. J Exp Child Psychol 8(1):33–39. DOI: 10.1016/0022-0965(69)90025-3 — doi_status: needs-verify
+  - Nalaz: stopa udaranja nogom raste kad udarac pokreće mobil (kontingentno potkrepljenje).
+  - Implikacija: poređenje sa učenjem iz nagrade (dopaminski signal) u modelu.
+  - Razlog: metapodaci nisu provereni kroz Crossref u ovoj rundi.
+- [ThelenSmith1994] Thelen E, Smith LB (1994). A Dynamic Systems Approach to the Development of Cognition and Action. MIT Press. nema DOI (knjiga) — doi_status: needs-verify
+  - Nalaz: razvoj motorike kao samoorganizacija sistema tela, okruženja i nervnog sistema.
+  - Implikacija: okvir za poređenje; ne služi kao izvor parametara.
+  - Razlog: knjiga bez DOI-ja; ne može biti verified.
+- [Azevedo2009] Azevedo FAC, Carvalho LRB, Grinberg LT, Farfel JM, Ferretti REL, Leite REP, Jacob Filho W, Lent R, Herculano-Houzel S (2009). Equal numbers of neuronal and nonneuronal cells make the human brain an isometrically scaled-up primate brain. J Comp Neurol 513(5):532–541. DOI: 10.1002/cne.21974 — doi_status: needs-verify
+  - Nalaz: ~86·10^9 neurona u ljudskom mozgu.
+  - Implikacija: razmera modela naspram ljudskog mozga.
+  - Razlog: metapodaci nisu provereni kroz Crossref u ovoj rundi.

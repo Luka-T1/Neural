@@ -1,0 +1,25 @@
+<mujoco model="limb_1dof">
+  <!--
+    Ud sa jednim stepenom slobode (hinge zglob "elbow"), bez gravitacije, u horizontalnoj ravni.
+    Mišićni momenti se unose preko data.qfrc_applied (nema MuJoCo mišića).
+    Parametri moraju biti usklađeni sa neural.embodiment.limb_env.LimbParams:
+      moment_arm = 0.03 m, l_opt = 0.10 m.
+    Jedinice: m, kg, s, rad, N·m.
+  -->
+  <compiler angle="radian" autolimits="true"/>
+  <option timestep="0.001" gravity="0 0 0" integrator="Euler"/>
+
+  <worldbody>
+    <body name="forearm" pos="0 0 0">
+      <joint name="elbow" type="hinge" axis="0 0 1" limited="true" range="-1.5 1.5" damping="0.5"/>
+      <geom name="link" type="capsule" fromto="0 0 0 0.3 0 0" size="0.02" mass="1.0"/>
+      <site name="tip" pos="0.3 0 0" size="0.01"/>
+    </body>
+  </worldbody>
+
+  <sensor>
+    <jointpos name="pos_elbow" joint="elbow"/>
+    <jointvel name="vel_elbow" joint="elbow"/>
+    <touch name="touch_tip" site="tip"/>
+  </sensor>
+</mujoco>
